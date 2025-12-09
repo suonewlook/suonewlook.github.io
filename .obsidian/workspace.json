@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/posts/你好，纯人类写作基地/index- test test.md",
+                "file": "content/posts/你好，纯人类写作基地/index- test test1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index- test test"
+              "title": "index- test test1"
             }
           }
         ]
@@ -181,13 +181,14 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
-      "templater-obsidian:Templater": false
+      "templater-obsidian:Templater": false,
+      "obsidian-shellcommands:Shell commands: Custom variables": false
     }
   },
   "active": "5ef66ab3e57529bc",
   "lastOpenFiles": [
     "templates/纯人类写作基地-文章.md",
-    "content/posts/你好，纯人类写作基地/index- test test.md",
+    "content/posts/你好，纯人类写作基地/index- test test1.md",
     "content/posts/你好，纯人类写作基地",
     "content/posts/Untitled.md",
     "archetypes/default.md",
