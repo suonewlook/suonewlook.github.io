@@ -1,4 +1,4 @@
-baseURL = "http://localhost/"
+baseURL = "https://suonewlook.github.io/"
 languageCode = "zh-cn"
 title = "纯人类写作基地"
 theme = "stack"
