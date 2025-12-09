@@ -1,5 +1,5 @@
 ---
-title: "现在"
+title: "Now"
 slug: "now"
 menu:
   main:

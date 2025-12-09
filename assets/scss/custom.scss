@@ -1,23 +1,175 @@
-/* 头像放大约 ×2 */
-.sidebar .site-avatar img,
-.site-avatar img {
-  width: 180px !important;
-  height: 180px !important;
-  border-radius: 999px;
-  object-fit: cover;
+/* === 侧边栏：不缩小头像，避免挡住主菜单文字 === */
+
+/* 1) 给头像区域更多“底部空间”，把菜单整体往下推 */
+.sidebar .site-avatar,
+.site-avatar {
+  margin-bottom: 1.5rem !important;
 }
 
-/* 左侧主菜单（你说的“目录/栏目”）放大显著 */
+/* 2) 再给菜单本体一点上边距，双保险 */
+.sidebar .menu {
+  margin-top: 0.75rem !important;
+}
+
+/* 3) 你要的“目录/栏目文字变大” */
 .sidebar .menu a {
-  font-size: 1.35rem !important;
-  line-height: 1.6 !important;
+  font-size: 1.5rem !important;
+  line-height: 1.7 !important;
 }
 
-/* 文章页右侧 TOC 放大至少 ×3 的体感 */
-.widget--toc .toc {
-  font-size: 1.25rem !important;
+/* 4) 如果确实出现“叠层遮挡”（视觉上头像压住文字）
+      让菜单文字层级更高 */
+.sidebar .menu {
+  position: relative;
+  z-index: 2;
 }
-.widget--toc .widget-title {
-  font-size: 1.5rem !important;
-  font-weight: 700;
+.sidebar .site-avatar,
+.site-avatar {
+  position: relative;
+  z-index: 1;
+}
+
+/* 5) 小屏再额外加点间距，避免顶部更紧凑时复发 */
+@media (max-width: 768px) {
+  .sidebar .site-avatar,
+  .site-avatar {
+    margin-bottom: 1.75rem !important;
+  }
+  .sidebar .menu a {
+    font-size: 1.35rem !important;
+  }
+}
+/* === 右侧文章目录（TOC）排版增强：更大、更清晰、更统一 === */
+
+/* 兼容 Stack 可能的 TOC 容器命名 */
+.widget--toc,
+.widget.toc,
+.widget:has(#TableOfContents) {
+  padding-top: .25rem;
+}
+
+/* TOC 标题 */
+.widget--toc .widget-title,
+.widget.toc .widget-title,
+.widget:has(#TableOfContents) .widget-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+  margin-bottom: .6rem;
+}
+
+/* Hugo 默认 TOC 容器 */
+#TableOfContents {
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+/* 列表缩进与层级空气感 */
+#TableOfContents ul {
+  margin: .25rem 0 .6rem 0;
+  padding-left: 1.05rem;
+}
+#TableOfContents li {
+  margin: .18rem 0;
+}
+
+/* 链接可读性 */
+#TableOfContents a {
+  text-decoration: none;
+}
+#TableOfContents a:hover {
+  text-decoration: underline;
+}
+
+/* 二级/三级层级稍微收一收，视觉更有梯度 */
+#TableOfContents ul ul {
+  font-size: .98em;
+  opacity: .9;
+}
+
+/* 小屏适配 */
+@media (max-width: 768px) {
+  #TableOfContents {
+    font-size: 1rem;
+  }
+}
+/* === 左右目录的“同一套视觉语言” === */
+
+/* 左侧主菜单的标题/链接更像 TOC 的节奏 */
+.sidebar .menu a {
+  letter-spacing: .01em;
+}
+
+/* 如果你有在左侧放 widgets（分类/标签等），统一一下标题风格 */
+.sidebar .widget-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
+/* === 正文可读性：更适合中文长文 === */
+.article-content,
+.content {
+  line-height: 1.85;
+  letter-spacing: .01em;
+}
+
+/* 小标题间距更呼吸 */
+.article-content h2,
+.article-content h3 {
+  margin-top: 1.6em;
+}
+/* === 首页/侧边栏 widgets 质感升级：更像“写作入口 + 专题导航” === */
+
+/* 1) 侧边栏小组件之间的呼吸感与轻分区 */
+.sidebar .widget {
+  margin-top: 1.25rem;
+  padding-top: .9rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+.sidebar .widget:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+/* 2) 小组件标题更一致、略放大 */
+.sidebar .widget-title {
+  font-size: 1.1rem;
+  font-weight: 650;
+  letter-spacing: .02em;
+}
+
+/* 3) Search 变“写作入口”的主按钮感 */
+.widget--search input[type="search"],
+.widget--search input[type="text"],
+.widget--search .search-form input {
+  font-size: 1.05rem;
+  padding: .7rem .9rem;
+  border-radius: 1rem;
+}
+
+/* 4) Categories 列表更清爽 */
+.widget--categories a {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* 5) Tag Cloud 更像可点的主题关键词 */
+.widget--tag-cloud a {
+  font-size: 1.02rem;
+  padding: .15rem .4rem;
+  border-radius: .6rem;
+}
+
+/* 6) Archives 更稳重一点 */
+.widget--archives a {
+  font-size: 1.02rem;
+}
+
+/* 7) 小屏端减少分隔线密度 */
+@media (max-width: 768px) {
+  .sidebar .widget {
+    margin-top: 1rem;
+    padding-top: .75rem;
+  }
 }

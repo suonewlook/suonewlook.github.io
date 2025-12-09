@@ -42,3 +42,50 @@ hasCJKLanguage = true
   ]
 
 
+# ===== 主菜单顺序（左侧）=====
+[menu]
+  [[menu.main]]
+    name = "首页"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    name = "随笔"
+    url = "/essay/"
+    weight = 10
+
+  [[menu.main]]
+    name = "长文"
+    url = "/longform/"
+    weight = 20
+
+  [[menu.main]]
+    name = "书摘"
+    url = "/excerpt/"
+    weight = 30
+
+  [[menu.main]]
+    name = "写作方法"
+    url = "/method/"
+    weight = 40
+
+  [[menu.main]]
+    name = "Now"
+    url = "/now/"
+    weight = 50
+
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 60
+
+  [[menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 70
+
+  [[menu.main]]
+    name = "Archives"
+    url = "/archives/"
+    weight = 999
+

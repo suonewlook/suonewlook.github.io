@@ -9,3 +9,15 @@ resources/
 
 # 其他可选
 .hugo_build.lock
+
+# Hugo 构建产物
+public/
+resources/
+.hugo_build.lock
+
+# macOS 垃圾文件
+.DS_Store
+
+# Obsidian：界面状态，不需要同步
+.obsidian/workspace.json
+.obsidian/bookmarks.json
