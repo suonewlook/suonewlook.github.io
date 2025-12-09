@@ -24,7 +24,7 @@
   "max_visible_lines_in_shell_command_fields": false,
   "shell_commands": [
     {
-      "id": "dk61juia1l",
+      "id": "xi5jvnt3i4",
       "platform_specific_commands": {
         "default": "cd \"$HOME/Sites/myblog\" && \"$HOME/Sites/myblog/deploy.sh\""
       },
