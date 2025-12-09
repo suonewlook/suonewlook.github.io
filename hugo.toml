@@ -8,7 +8,29 @@ hasCJKLanguage = true
   pagerSize = 10
 
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+  home = ["HTML", "RSS"]
+
+[params]
+  mainSections = ["posts"]
+
+[params.sidebar]
+  emoji = "✍️"
+  subtitle = "写作？"
+
+[params.sidebar.avatar]
+  enabled = true
+  local = true
+  src = "img/avatar.png"
+
+[params.widgets]
+  homepage = [
+    { type = "search" },
+    { type = "archives" },
+    { type = "tag-cloud" }
+  ]
+  page = [
+    { type = "toc" }
+  ]
 
 [menu]
   [[menu.main]]
@@ -35,26 +57,3 @@ hasCJKLanguage = true
     name = "现在"
     url = "/now/"
     weight = 5
-
-[params]
-  mainSections = ["posts"]
-  description = "真实的写作基地。"
-
-[params.sidebar]
-  emoji = "✍️"
-  subtitle = "写作？"
-
-[params.sidebar.avatar]
-  enabled = true
-  local = true
-  src = "img/avatar.png"
-
-[params.widgets]
-  homepage = [
-    { type = "search" },
-    { type = "archives" },
-    { type = "tag-cloud" }
-  ]
-  page = [
-    { type = "toc" }
-  ]
