@@ -173,3 +173,105 @@
     padding-top: .75rem;
   }
 }
+
+/* === 首页主内容区：杂志式分区布局 === */
+
+.home-magazine {
+  display: grid;
+  gap: 2rem;
+}
+
+/* 每个分区块 */
+.home-block {
+  padding-top: .5rem;
+}
+
+/* 分区标题行：左标题右“更多” */
+.home-block-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: .9rem;
+}
+
+.home-block-title {
+  font-size: 1.6rem;
+  font-weight: 650;
+  letter-spacing: .02em;
+  margin: 0;
+}
+
+.home-block-more {
+  font-size: 1rem;
+  opacity: .7;
+  text-decoration: none;
+}
+.home-block-more:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* 分区内文章卡片：大屏两列，小屏一列 */
+.home-block-list {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .home-block-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Now 分区做得更像“导读卡” */
+.home-block-now .home-block-now-body {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  opacity: .9;
+}
+
+/* === 左侧主菜单字体再放大一档 === */
+.sidebar .menu a,
+.sidebar .main-menu a,
+.sidebar .menu .menu-item a {
+  font-size: 1.65rem !important;
+  line-height: 1.75 !important;
+}
+
+/* 菜单分组/小标题（如果有） */
+.sidebar .menu span,
+.sidebar .menu .section-title {
+  font-size: 1.05rem !important;
+}
+
+/* === 首页“杂志分区”标题 & 列表字号整体提升 === */
+.home-magazine {
+  font-size: 1.08rem;
+  gap: 2.2rem;
+}
+
+.home-block-title {
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+}
+
+.home-block-more {
+  font-size: 1.05rem !important;
+}
+
+/* 分区内卡片标题（多选择器兜底，适配 Stack 的可能命名） */
+.home-block .article-title,
+.home-block .summary-title,
+.home-block .title {
+  font-size: 1.25rem !important;
+  line-height: 1.5 !important;
+}
+
+/* 分区内摘要文字 */
+.home-block .article-excerpt,
+.home-block .summary,
+.home-block .content {
+  font-size: 1.05rem !important;
+  line-height: 1.8 !important;
+}

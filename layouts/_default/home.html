@@ -1,0 +1,66 @@
+{{ define "main" }}
+
+{{/* === 杂志式首页分区 === */}}
+
+{{ $sectionOrder := slice "essay" "longform" "excerpt" "method" "posts" }}
+
+{{ $sectionTitles := dict
+  "essay" "随笔"
+  "longform" "长文"
+  "excerpt" "书摘"
+  "method" "写作方法"
+  "posts" "Posts"
+}}
+
+<div class="home-magazine">
+
+  {{/* 可选：Now 作为首页顶部入口卡 */}}
+  {{ with .Site.GetPage "/now" }}
+    <section class="home-block home-block-now">
+      <header class="home-block-header">
+        <h2 class="home-block-title">
+          <a href="{{ .RelPermalink }}">Now</a>
+        </h2>
+        <a class="home-block-more" href="{{ .RelPermalink }}">进入</a>
+      </header>
+      <div class="home-block-now-body">
+        {{ .Summary | default .Description }}
+      </div>
+    </section>
+  {{ end }}
+
+  {{ range $sectionOrder }}
+    {{ $sec := . }}
+    {{ $pages := (where $.Site.RegularPages "Section" $sec).ByDate.Reverse | first 6 }}
+    {{ $sectionPage := $.Site.GetPage (printf "/%s" $sec) }}
+
+    {{ if gt (len $pages) 0 }}
+      <section class="home-block">
+
+        <header class="home-block-header">
+          <h2 class="home-block-title">
+            {{ if $sectionPage }}
+              <a href="{{ $sectionPage.RelPermalink }}">{{ index $sectionTitles $sec }}</a>
+            {{ else }}
+              {{ index $sectionTitles $sec }}
+            {{ end }}
+          </h2>
+
+          {{ if $sectionPage }}
+            <a class="home-block-more" href="{{ $sectionPage.RelPermalink }}">更多</a>
+          {{ end }}
+        </header>
+
+        <div class="home-block-list">
+          {{ range $pages }}
+            {{ .Render "summary" }}
+          {{ end }}
+        </div>
+
+      </section>
+    {{ end }}
+  {{ end }}
+
+</div>
+
+{{ end }}

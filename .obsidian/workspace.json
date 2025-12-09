@@ -11,10 +11,14 @@
             "id": "4df650c7b35c2b6e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "templates/纯人类写作基地-文章.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "纯人类写作基地-文章"
             }
           }
         ]
@@ -180,18 +184,27 @@
   },
   "active": "4df650c7b35c2b6e",
   "lastOpenFiles": [
+    "content/posts/Test.md",
+    "content/page/search/index.md",
+    "content/posts/你好，纯人类写作基地/index- test test1.md",
+    "content/page.md",
+    "content/page/search.md",
+    "content/page/archives/index.md",
+    "content/page/archives.md",
+    "content/page/about/index.md",
+    "content/page/about.md",
+    "content/now/_index.md",
+    "public/scss/style.min.5afa2707aee10ad56aa9d4c43f5ec5f8dde7386d5a966fa2e7e00b1f8cbde451.css",
+    "layouts/_default/home.html.md",
+    "layouts/_default/home.html",
     "public/now/page/1/index.html",
     "public/now/page/1",
     "public/now/page",
     "public/now/index.xml",
     "public/now/index.html",
     "public/now",
-    "content/now/_index.md",
     "content/now",
     "public/index.xml",
-    "public/index.json",
-    "public/tags/随笔/page/1/index.html",
-    "public/tags/随笔/page/1",
     "resources/_gen/images/img/avatar_hu_f7aca4c32963e0b7.png",
     "public/img/avatar_hu_f7aca4c32963e0b7.png"
   ]
