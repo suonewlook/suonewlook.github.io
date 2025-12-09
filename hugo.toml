@@ -10,12 +10,12 @@ hasCJKLanguage = true
 [outputs]
   home = ["HTML", "RSS"]
 
+[params.sidebar]
+  emoji = ""
+  subtitle = "思考慢慢"
+
 [params]
   mainSections = ["posts"]
-
-[params.sidebar]
-  emoji = "✍️"
-  subtitle = "写作？"
 
 [params.sidebar.avatar]
   enabled = true

@@ -1,0 +1,54 @@
+/* ===== 纯人类写作基地 - 侧栏与导航优化 ===== */
+
+/* 1) 万一 emoji 还生成，强制隐藏（双保险） */
+.site-avatar .emoji,
+.site-avatar .avatar-emoji,
+.sidebar .site-avatar .emoji {
+  display: none !important;
+}
+
+/* 2) 放大头像 */
+.sidebar .site-avatar img,
+.site-avatar img {
+  width: clamp(88px, 10vw, 120px);
+  height: clamp(88px, 10vw, 120px);
+}
+
+/* 3) 侧栏站点标题更耐看 */
+.sidebar .site-name,
+.sidebar header h1 {
+  font-size: 1.35rem;
+  letter-spacing: 0.02em;
+}
+
+/* 4) 放大左侧“目录/导航”文字（首页/归档/标签/关于/现在） */
+.sidebar .menu,
+.sidebar .menu a {
+  font-size: 1.05rem;
+}
+
+/* 5) 右侧小组件标题更清晰（主页 Archives/Tags 等） */
+.widget-title {
+  font-size: 1.05rem;
+}
+
+/* ===== 可选：文章页 TOC 更大更好读 ===== */
+.widget--toc,
+.toc {
+  font-size: 1.02rem;
+}
+
+/* 增加 TOC 行距 */
+.toc a {
+  line-height: 1.6;
+}
+
+body {
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+}
+
+/* 正文宽度更像“阅读型写作站” */
+.article-content {
+  max-width: 42rem;
+}
