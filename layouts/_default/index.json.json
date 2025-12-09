@@ -1,0 +1,18 @@
+{{- /* layouts/_default/index.json.json */ -}}
+[
+{{- $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections -}}
+{{- range $index, $page := $pages -}}
+  {{- if gt $index 0 }},{{ end }}
+  {
+    "title": {{ printf "%q" $page.Title }},
+    "date":  {{ printf "%q" ($page.Date.Format "2006-01-02T15:04:05Z07:00") }},
+    "url":   {{ printf "%q" $page.RelPermalink }},
+    "summary": {{ printf "%q" (default "" $page.Summary) }},
+    "tags": [
+      {{- range $i, $tag := $page.Params.tags -}}
+        {{- if gt $i 0 }}, {{ end }}{{ printf "%q" $tag }}
+      {{- end -}}
+    ]
+  }
+{{- end -}}
+]
