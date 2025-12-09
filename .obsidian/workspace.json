@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "archetypes/default.md",
+                "file": "content/posts/hello.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "default"
+              "title": "hello"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "archetypes/default.md",
+                "file": "content/posts/hello.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for default"
+              "title": "Backlinks for hello"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "archetypes/default.md",
+                "file": "content/posts/hello.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from default"
+              "title": "Outgoing links from hello"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "archetypes/default.md",
+                "file": "content/posts/hello.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of default"
+              "title": "Outline of hello"
             }
           }
         ]
@@ -185,8 +185,8 @@
   },
   "active": "5ef66ab3e57529bc",
   "lastOpenFiles": [
-    "content/posts/hello.md",
     "archetypes/default.md",
+    "content/posts/hello.md",
     "static/img/avatar.png",
     "public/img/avatar.png",
     "static/img",
